@@ -1,0 +1,2169 @@
+<!doctype html>
+<html class="dark" lang="uz">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_standard" name="shell-type" />
+    <title>Abdukarimova Muborak | Bektemir Tumani Nomzodi</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Sahifa yuklanishidan oldin saqlangan rejimni o'rnatish (miltillashni oldini oladi) -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("theme");
+          if (saved === "light")
+            document.documentElement.classList.remove("dark");
+          else document.documentElement.classList.add("dark");
+        } catch (e) {}
+      })();
+    </script>
+
+    <style>
+      /* ============ RANG TOKENLARI (RGB kanallari) ============ */
+      /* LIGHT MODE: oq + och ko'k */
+      :root {
+        --background: 240 247 255;
+        --surface-container-lowest: 255 255 255;
+        --surface-container-low: 232 243 253;
+        --surface-container: 222 238 252;
+        --surface-container-high: 207 227 248;
+        --surface-container-highest: 190 216 243;
+        --surface-bright: 255 255 255;
+        --on-surface: 15 35 60;
+        --on-surface-variant: 62 85 112;
+        --outline: 100 125 155;
+        --outline-variant: 165 190 220;
+        --primary: 2 119 189;
+        --on-primary: 255 255 255;
+        --primary-container: 179 218 250;
+        --on-primary-container: 1 42 80;
+        --secondary: 190 60 95;
+        --on-secondary: 255 255 255;
+        --tertiary: 160 110 10;
+        --on-tertiary: 255 255 255;
+        --error: 186 26 26;
+        --error-container: 255 218 214;
+        --glow: 2 119 189;
+        --shadow-color: 30 90 150;
+      }
+      /* DARK MODE: hozirgi to'q dizayn */
+      :root.dark {
+        --background: 16 20 26;
+        --surface-container-lowest: 10 14 20;
+        --surface-container-low: 24 28 34;
+        --surface-container: 28 32 38;
+        --surface-container-high: 38 42 49;
+        --surface-container-highest: 49 53 60;
+        --surface-bright: 53 57 64;
+        --on-surface: 223 226 235;
+        --on-surface-variant: 189 202 192;
+        --outline: 136 148 139;
+        --outline-variant: 62 73 66;
+        --primary: 117 218 168;
+        --on-primary: 0 56 35;
+        --primary-container: 82 183 136;
+        --on-primary-container: 0 68 44;
+        --secondary: 255 179 181;
+        --on-secondary: 83 32 36;
+        --tertiary: 233 193 118;
+        --on-tertiary: 65 45 0;
+        --error: 255 180 171;
+        --error-container: 147 0 10;
+        --glow: 82 183 136;
+        --shadow-color: 0 0 0;
+      }
+      :root {
+        color-scheme: light;
+      }
+      :root.dark {
+        color-scheme: dark;
+      }
+
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        transition:
+          background-color 0.35s ease,
+          color 0.35s ease;
+      }
+      main > :first-child {
+        margin-top: 0 !important;
+      }
+      main > :last-child {
+        margin-bottom: 0 !important;
+      }
+
+      .glass-shadow {
+        box-shadow:
+          0 20px 40px -15px rgb(var(--shadow-color) / 0.45),
+          0 0 1px 1px rgb(var(--glow) / 0.12);
+      }
+      /* Light rejimda soyalar yumshoqroq va ko'kimtir bo'lsin */
+      :root:not(.dark) .shadow-md,
+      :root:not(.dark) .shadow-lg,
+      :root:not(.dark) .shadow-xl,
+      :root:not(.dark) .shadow-2xl,
+      :root:not(.dark) .shadow-inner {
+        box-shadow: 0 10px 30px -12px rgb(30 90 150/0.28) !important;
+      }
+      :root:not(.dark) .shadow-black\/40,
+      :root:not(.dark) .shadow-black\/20 {
+        --tw-shadow-color: rgb(30 90 150/0.25);
+      }
+    </style>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      const c = (name) => `rgb(var(--${name}) / <alpha-value>)`;
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              background: c("background"),
+              surface: c("background"),
+              "surface-dim": c("background"),
+              "surface-container-lowest": c("surface-container-lowest"),
+              "surface-container-low": c("surface-container-low"),
+              "surface-container": c("surface-container"),
+              "surface-container-high": c("surface-container-high"),
+              "surface-container-highest": c("surface-container-highest"),
+              "surface-bright": c("surface-bright"),
+              "surface-variant": c("surface-container-highest"),
+              "on-surface": c("on-surface"),
+              "on-background": c("on-surface"),
+              "on-surface-variant": c("on-surface-variant"),
+              outline: c("outline"),
+              "outline-variant": c("outline-variant"),
+              primary: c("primary"),
+              "on-primary": c("on-primary"),
+              "primary-container": c("primary-container"),
+              "on-primary-container": c("on-primary-container"),
+              secondary: c("secondary"),
+              "on-secondary": c("on-secondary"),
+              tertiary: c("tertiary"),
+              "on-tertiary": c("on-tertiary"),
+              error: c("error"),
+              "error-container": c("error-container"),
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              "margin-mobile": "1.25rem",
+              "space-xl": "3.5rem",
+              "space-sm": "0.5rem",
+              "space-xs": "0.25rem",
+              "space-2xl": "6rem",
+              "gutter-mobile": "1rem",
+              margin: "4rem",
+              gutter: "1.5rem",
+              "space-lg": "2rem",
+              "space-md": "1rem",
+            },
+            fontFamily: {
+              "headline-sm": ["Plus Jakarta Sans"],
+              "display-xl-mobile": ["Playfair Display"],
+              "title-editorial": ["Playfair Display"],
+              "headline-lg": ["Playfair Display"],
+              "headline-md": ["Playfair Display"],
+              "body-lg": ["Plus Jakarta Sans"],
+              "label-caps": ["Plus Jakarta Sans"],
+              "body-md": ["Plus Jakarta Sans"],
+              "label-ui": ["Plus Jakarta Sans"],
+              "display-xl": ["Playfair Display"],
+              "headline-lg-mobile": ["Playfair Display"],
+              "body-sm": ["Plus Jakarta Sans"],
+            },
+            fontSize: {
+              "headline-sm": [
+                "1.25rem",
+                {
+                  lineHeight: "1.75rem",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "600",
+                },
+              ],
+              "display-xl-mobile": [
+                "2.75rem",
+                {
+                  lineHeight: "3.25rem",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "400",
+                },
+              ],
+              "title-editorial": [
+                "1.5rem",
+                {
+                  lineHeight: "2rem",
+                  letterSpacing: "0.02em",
+                  fontWeight: "400",
+                },
+              ],
+              "headline-lg": [
+                "3rem",
+                {
+                  lineHeight: "3.5rem",
+                  letterSpacing: "-0.015em",
+                  fontWeight: "500",
+                },
+              ],
+              "headline-md": [
+                "2rem",
+                { lineHeight: "2.5rem", fontWeight: "600" },
+              ],
+              "body-lg": [
+                "1.125rem",
+                { lineHeight: "1.875rem", fontWeight: "400" },
+              ],
+              "label-caps": [
+                "0.75rem",
+                {
+                  lineHeight: "1rem",
+                  letterSpacing: "0.15em",
+                  fontWeight: "600",
+                },
+              ],
+              "body-md": [
+                "1rem",
+                { lineHeight: "1.625rem", fontWeight: "400" },
+              ],
+              "label-ui": [
+                "0.875rem",
+                {
+                  lineHeight: "1.25rem",
+                  letterSpacing: "0.01em",
+                  fontWeight: "500",
+                },
+              ],
+              "display-xl": [
+                "4.5rem",
+                {
+                  lineHeight: "5rem",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "400",
+                },
+              ],
+              "headline-lg-mobile": [
+                "2rem",
+                {
+                  lineHeight: "2.5rem",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "500",
+                },
+              ],
+              "body-sm": [
+                "0.875rem",
+                { lineHeight: "1.375rem", fontWeight: "400" },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-background font-body-md text-body-md text-on-surface antialiased relative min-h-screen selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden"
+  >
+    <!-- Background glow -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+      <div
+        class="absolute -top-[25%] -left-[10%] w-[65vw] h-[65vw] rounded-full bg-primary/10 blur-[140px] animate-pulse duration-1000"
+      ></div>
+      <div
+        class="absolute top-[40%] -right-[15%] w-[55vw] h-[55vw] rounded-full bg-secondary/5 blur-[150px]"
+      ></div>
+      <div
+        class="absolute -bottom-[20%] left-[20%] w-[50vw] h-[50vw] rounded-full bg-tertiary/5 blur-[130px]"
+      ></div>
+      <div
+        class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,transparent_0%,rgb(var(--background)/0.65)_100%)]"
+      ></div>
+    </div>
+
+    <!-- Header -->
+    <header
+      class="fixed top-0 left-0 right-0 z-50 pointer-events-none p-gutter-mobile md:p-gutter lg:p-space-md"
+    >
+      <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <div
+          class="pointer-events-auto flex items-center gap-space-sm bg-surface-container-low/75 backdrop-blur-2xl px-space-md py-space-xs rounded-full glass-shadow"
+        >
+          <div class="w-2.5 h-2.5 rounded-full bg-primary animate-ping"></div>
+          <span
+            class="font-label-caps text-label-caps text-on-surface uppercase tracking-widest"
+            >Abdukarimova Muborak</span
+          >
+          <span class="text-outline-variant font-body-sm text-body-sm">•</span>
+          <span
+            class="font-label-caps text-label-caps text-primary uppercase tracking-widest hidden sm:inline"
+            >Bektemir Tumani Nomzodi</span
+          >
+        </div>
+        <div class="pointer-events-auto flex items-center gap-space-sm">
+          <!-- DARK / LIGHT tugmasi -->
+          <button
+            id="theme-toggle"
+            aria-label="Rejimni almashtirish"
+            title="Rejimni almashtirish"
+            type="button"
+            class="w-10 h-10 rounded-full bg-surface-container-low/75 backdrop-blur-2xl flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors glass-shadow"
+          >
+            <span id="theme-icon" class="material-symbols-outlined text-[18px]"
+              >light_mode</span
+            >
+          </button>
+          <div
+            class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_0_24px_rgb(var(--glow)/0.35)]"
+          >
+            <span class="material-symbols-outlined text-on-primary text-[18px]"
+              >person</span
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Side nav -->
+    <aside
+      class="fixed right-4 md:right-8 top-1/2 -translate-y-1/2 z-40 hidden sm:flex flex-col items-center gap-space-xs p-space-xs bg-surface-container-low/60 backdrop-blur-2xl rounded-full glass-shadow"
+    >
+      <nav class="flex flex-col gap-2 p-1" id="side-nav">
+        <a
+          class="side-dot w-3 h-3 rounded-full bg-surface-container-highest transition-all duration-300 hover:scale-125"
+          href="#sec-1"
+          title="Dossier &amp; Profile"
+        ></a>
+        <a
+          class="side-dot w-3 h-3 rounded-full bg-surface-container-highest transition-all duration-300 hover:scale-125"
+          href="#sec-2"
+          title="Leadership Vision"
+        ></a>
+        <a
+          class="side-dot w-3 h-3 rounded-full bg-surface-container-highest transition-all duration-300 hover:scale-125"
+          href="#sec-3"
+          title="Strategic Pillars"
+        ></a>
+        <a
+          class="side-dot w-3 h-3 rounded-full bg-surface-container-highest transition-all duration-300 hover:scale-125"
+          href="#sec-4"
+          title="District Pedagogy"
+        ></a>
+        <a
+          class="side-dot w-3 h-3 rounded-full bg-surface-container-highest transition-all duration-300 hover:scale-125"
+          href="#sec-5"
+          title="Digital Renaissance"
+        ></a>
+        <a
+          class="side-dot w-3 h-3 rounded-full bg-surface-container-highest transition-all duration-300 hover:scale-125"
+          href="#sec-6"
+          title="Educator Equity"
+        ></a>
+        <a
+          class="side-dot w-3 h-3 rounded-full bg-surface-container-highest transition-all duration-300 hover:scale-125"
+          href="#sec-7"
+          title="Infrastructure Renaissance"
+        ></a>
+        <a
+          class="side-dot w-3 h-3 rounded-full bg-surface-container-highest transition-all duration-300 hover:scale-125"
+          href="#sec-8"
+          title="Youth Governance"
+        ></a>
+        <a
+          class="side-dot w-3 h-3 rounded-full bg-surface-container-highest transition-all duration-300 hover:scale-125"
+          href="#sec-9"
+          title="Implementation Roadmap"
+        ></a>
+        <a
+          class="side-dot w-3 h-3 rounded-full bg-surface-container-highest transition-all duration-300 hover:scale-125"
+          href="#sec-10"
+          title="Civic Compact &amp; Mandate"
+        ></a>
+      </nav>
+    </aside>
+
+    <main class="relative z-10 w-full pt-0 bg-transparent">
+      <div class="flex flex-col w-full text-on-surface">
+        <!-- Floating bottom bar -->
+        <div
+          class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 px-4 py-2.5 rounded-full bg-surface-container-low/85 backdrop-blur-2xl shadow-xl shadow-black/40"
+        >
+          <div class="flex items-center gap-1.5 pr-2">
+            <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            <span
+              class="font-label-caps text-label-caps text-on-surface-variant uppercase hidden md:inline tracking-wider"
+              >Bektemir '25</span
+            >
+          </div>
+          <div class="h-4 w-px bg-outline-variant/30"></div>
+          <div class="flex items-center gap-1">
+            <a
+              class="px-2 py-1 rounded-full font-label-caps text-label-caps text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all"
+              href="#sec-1"
+              >01</a
+            >
+            <a
+              class="px-2 py-1 rounded-full font-label-caps text-label-caps text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all"
+              href="#sec-3"
+              >03</a
+            >
+            <a
+              class="px-2 py-1 rounded-full font-label-caps text-label-caps text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all"
+              href="#sec-5"
+              >05</a
+            >
+            <a
+              class="px-2 py-1 rounded-full font-label-caps text-label-caps text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all"
+              href="#sec-8"
+              >08</a
+            >
+            <a
+              class="px-2.5 py-1 rounded-full font-label-caps text-label-caps bg-primary text-on-primary font-semibold transition-transform hover:scale-105"
+              href="#sec-10"
+              >Qo'llab-quvvatlash</a
+            >
+          </div>
+        </div>
+
+        <!-- SECTION 1: HERO -->
+        <section
+          class="relative min-h-[92vh] flex items-center justify-center px-margin-mobile md:px-margin py-space-xl overflow-hidden"
+          id="sec-1"
+        >
+          <div
+            class="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full bg-primary/10 blur-[130px] pointer-events-none"
+          ></div>
+          <div
+            class="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-tertiary/5 blur-[120px] pointer-events-none"
+          ></div>
+          <div
+            class="max-w-6xl mx-auto w-full flex flex-col items-center text-center relative z-10 pt-8 md:pt-12"
+          >
+            <div
+              class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-surface-container-high/60 backdrop-blur-xl shadow-lg mb-8"
+            >
+              <img
+                alt="Bektemir Sardorlik Emblemasi"
+                class="w-6 h-6 rounded-full object-cover shadow-sm"
+                src="https://lh3.googleusercontent.com/aida/AEtjO1UArXiew5Koz9ZjdB0pQLA6Sb1OLJoux6jgbCY7y1klRWMQrnAef_PIOf8LMVqsGFgvd1j0KYbfr3P0b6sBxOaLcHVY-S8QYZ_5YTXDTVU-KIuFe0DGGXXN8GpXSJ9rJo93yYn4z6JfrejD82M9e7wLLvVTfdpbFdpnVDGTAvc1vnKZHYpIFGiB5t1dn4xSkacs78_z70zdooEGWO4LxigPQ9F-QsnzE_6u1y-_cu3DgAhuydw_Sty-UDz3"
+              />
+              <span
+                class="font-label-caps text-label-caps text-primary tracking-widest uppercase"
+                >Bektemir Tumani | Ta'lim Koordinatori Sardorligi Nomzodi</span
+              >
+            </div>
+            <h1
+              class="font-display-xl text-display-xl-mobile md:text-display-xl text-on-surface max-w-4xl tracking-tight leading-none mb-6"
+            >
+              Ta'lim Kelajagi:
+              <span class="italic font-light text-tertiary"
+                >Yangi G'oyalar,</span
+              >
+              Hamkorlik va Sun'iy Intellekt
+            </h1>
+            <p
+              class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-10 leading-relaxed"
+            >
+              Maktablararo raqobatdan — do'stona hamkorlikka, iste'doddan —
+              yuksak marralarga. Toshkent shahar Bektemir tumani yoshlar ta'lim
+              tizimini transformatsiya qilish strategiyasi.
+            </p>
+            <div
+              class="w-full max-w-3xl rounded-xl bg-surface-container/70 backdrop-blur-2xl p-6 md:p-8 shadow-2xl relative overflow-hidden mb-10 text-left"
+            >
+              <div
+                class="absolute top-0 right-0 w-48 h-48 bg-primary/10 rounded-full blur-3xl pointer-events-none"
+              ></div>
+              <div
+                class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6"
+              >
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-16 h-16 rounded-xl bg-surface-container-highest flex items-center justify-center overflow-hidden shrink-0 shadow-inner"
+                  >
+                    <img
+                      alt="Abdukarimova Muborak"
+                      class="w-full h-full object-cover"
+                      src="https://lh3.googleusercontent.com/aida/AEtjO1UArXiew5Koz9ZjdB0pQLA6Sb1OLJoux6jgbCY7y1klRWMQrnAef_PIOf8LMVqsGFgvd1j0KYbfr3P0b6sBxOaLcHVY-S8QYZ_5YTXDTVU-KIuFe0DGGXXN8GpXSJ9rJo93yYn4z6JfrejD82M9e7wLLvVTfdpbFdpnVDGTAvc1vnKZHYpIFGiB5t1dn4xSkacs78_z70zdooEGWO4LxigPQ9F-QsnzE_6u1y-_cu3DgAhuydw_Sty-UDz3"
+                    />
+                  </div>
+                  <div>
+                    <span
+                      class="font-label-caps text-label-caps text-tertiary uppercase tracking-wider block"
+                      >Nomzod Profili</span
+                    >
+                    <h3
+                      class="font-headline-md text-headline-sm md:text-headline-md text-on-surface font-semibold"
+                    >
+                      Abdukarimova Muborak
+                    </h3>
+                    <p
+                      class="font-body-sm text-body-sm text-on-surface-variant"
+                    >
+                      348-maktab Ta'lim Koordinatori Sardori
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="bg-surface-container-low/90 rounded-lg p-4 max-w-xs shadow-inner"
+                >
+                  <span
+                    class="font-label-caps text-label-caps text-primary uppercase block mb-1"
+                    >Bosh Shior</span
+                  >
+                  <p
+                    class="font-title-editorial text-title-editorial italic text-on-surface leading-snug"
+                  >
+                    «Biz sun'iy intellektni boshqaramiz, u bizni emas!»
+                  </p>
+                </div>
+              </div>
+              <div
+                class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6 pt-6 bg-surface-container-highest/20 rounded-lg p-4"
+              >
+                <div class="flex flex-col">
+                  <span
+                    class="font-headline-sm text-headline-sm text-primary font-bold"
+                    >348-maktab</span
+                  >
+                  <span
+                    class="font-body-sm text-body-sm text-on-surface-variant"
+                    >Amaliy isbotlangan natijalar bazasi</span
+                  >
+                </div>
+                <div class="flex flex-col">
+                  <span
+                    class="font-headline-sm text-headline-sm text-tertiary font-bold"
+                    >100%</span
+                  >
+                  <span
+                    class="font-body-sm text-body-sm text-on-surface-variant"
+                    >Qog'ozbozliksiz amaliy yondashuv</span
+                  >
+                </div>
+                <div class="flex flex-col">
+                  <span
+                    class="font-headline-sm text-headline-sm text-secondary font-bold"
+                    >0 ta Formalizm</span
+                  >
+                  <span
+                    class="font-body-sm text-body-sm text-on-surface-variant"
+                    >Haqiqiy o'quvchilar ovozi &amp; erki</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap items-center justify-center gap-4">
+              <a
+                class="px-8 py-4 rounded-full bg-primary text-on-primary font-label-ui text-label-ui font-semibold shadow-lg shadow-primary/20 hover:scale-105 active:scale-95 transition-transform flex items-center gap-2"
+                href="#sec-2"
+              >
+                <span>Dasturni o'rganish</span>
+                <span class="material-symbols-outlined text-[18px]"
+                  >arrow_downward</span
+                >
+              </a>
+              <a
+                class="px-8 py-4 rounded-full bg-surface-container-high/80 text-on-surface hover:bg-surface-bright font-label-ui text-label-ui transition-all flex items-center gap-2"
+                href="#sec-10"
+              >
+                <span>Nomzod manifesti</span>
+                <span class="material-symbols-outlined text-[18px]"
+                  >verified</span
+                >
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 2 -->
+        <section
+          class="relative px-margin-mobile md:px-margin py-space-2xl bg-surface-container-lowest/50"
+          id="sec-2"
+        >
+          <div class="max-w-6xl mx-auto">
+            <div
+              class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4"
+            >
+              <div>
+                <span
+                  class="font-label-caps text-label-caps text-primary tracking-widest uppercase block mb-2"
+                  >02-Qism • Jonli Natijalar</span
+                >
+                <h2
+                  class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface"
+                >
+                  Nazariya Emas —
+                  <span class="italic font-normal text-tertiary"
+                    >Real Natijalar</span
+                  >
+                </h2>
+              </div>
+              <p
+                class="font-body-md text-body-md text-on-surface-variant max-w-md"
+              >
+                348-maktabda o'tgan bir yil davomida shakllantirilgan,
+                o'quvchilar hayotida bevosita o'zgarish yasagan tajriba modeli.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div
+                class="rounded-xl bg-surface-container/70 backdrop-blur-xl p-6 flex flex-col justify-between hover:-translate-y-1.5 transition-transform duration-300 shadow-md shadow-black/20 group"
+              >
+                <div>
+                  <div
+                    class="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-on-primary transition-colors"
+                  >
+                    <span class="material-symbols-outlined">forum</span>
+                  </div>
+                  <span
+                    class="font-label-caps text-label-caps text-on-surface-variant tracking-wider uppercase block mb-1"
+                    >Ko'nikma</span
+                  >
+                  <h4
+                    class="font-headline-sm text-headline-sm text-on-surface mb-3"
+                  >
+                    Interaktiv Debatlar
+                  </h4>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    O'quvchilarda jamoat oldida erkin so'zlash, mulohaza
+                    yuritish va mustaqil tanqidiy fikrlash madaniyati tizimli
+                    shakllantirildi.
+                  </p>
+                </div>
+                <div
+                  class="mt-8 pt-4 bg-surface-container-high/40 rounded-lg p-3"
+                >
+                  <span
+                    class="font-label-caps text-label-caps text-primary block"
+                    >Hujjatlashtirilgan Natija</span
+                  >
+                  <span
+                    class="font-headline-md text-headline-md text-on-surface font-bold"
+                    >+140%</span
+                  >
+                  <span
+                    class="font-body-sm text-body-sm text-on-surface-variant block"
+                    >Ommaviy faollik ko'rsatkichi</span
+                  >
+                </div>
+              </div>
+              <div
+                class="rounded-xl bg-surface-container/70 backdrop-blur-xl p-6 flex flex-col justify-between hover:-translate-y-1.5 transition-transform duration-300 shadow-md shadow-black/20 group"
+              >
+                <div>
+                  <div
+                    class="w-12 h-12 rounded-lg bg-tertiary/10 text-tertiary flex items-center justify-center mb-6 group-hover:bg-tertiary group-hover:text-on-tertiary transition-colors"
+                  >
+                    <span class="material-symbols-outlined">psychology</span>
+                  </div>
+                  <span
+                    class="font-label-caps text-label-caps text-on-surface-variant tracking-wider uppercase block mb-1"
+                    >Psixologik Diagnostika</span
+                  >
+                  <h4
+                    class="font-headline-sm text-headline-sm text-on-surface mb-3"
+                  >
+                    Iqtidor Diagnostikasi
+                  </h4>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Passiv va tortinchoq o'quvchilar bilan individual yondashuv
+                    suhbatlari o'tkazilib, ularning yashirin qobiliyatlari kashf
+                    qilindi.
+                  </p>
+                </div>
+                <div
+                  class="mt-8 pt-4 bg-surface-container-high/40 rounded-lg p-3"
+                >
+                  <span
+                    class="font-label-caps text-label-caps text-tertiary block"
+                    >Kashf Etilgan Yoshlar</span
+                  >
+                  <span
+                    class="font-headline-md text-headline-md text-on-surface font-bold"
+                    >85+</span
+                  >
+                  <span
+                    class="font-body-sm text-body-sm text-on-surface-variant block"
+                    >Iqtidor yangi bosqichga chiqdi</span
+                  >
+                </div>
+              </div>
+              <div
+                class="rounded-xl bg-surface-container/70 backdrop-blur-xl p-6 flex flex-col justify-between hover:-translate-y-1.5 transition-transform duration-300 shadow-md shadow-black/20 group"
+              >
+                <div>
+                  <div
+                    class="w-12 h-12 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center mb-6 group-hover:bg-secondary group-hover:text-on-secondary transition-colors"
+                  >
+                    <span class="material-symbols-outlined">slideshow</span>
+                  </div>
+                  <span
+                    class="font-label-caps text-label-caps text-on-surface-variant tracking-wider uppercase block mb-1"
+                    >Format</span
+                  >
+                  <h4
+                    class="font-headline-sm text-headline-sm text-on-surface mb-3"
+                  >
+                    Innovatsion Taqdimotlar
+                  </h4>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Standart quruq doskadan qochib, raqamli media, dizayn va
+                    vizual taqdimotlar tanlovlari orqali g'oyalar namoyish
+                    etildi.
+                  </p>
+                </div>
+                <div
+                  class="mt-8 pt-4 bg-surface-container-high/40 rounded-lg p-3"
+                >
+                  <span
+                    class="font-label-caps text-label-caps text-secondary block"
+                    >Amalga Oshgan</span
+                  >
+                  <span
+                    class="font-headline-md text-headline-md text-on-surface font-bold"
+                    >40+</span
+                  >
+                  <span
+                    class="font-body-sm text-body-sm text-on-surface-variant block"
+                    >Mustaqil taqdimot loyihalari</span
+                  >
+                </div>
+              </div>
+              <div
+                class="rounded-xl bg-surface-container/70 backdrop-blur-xl p-6 flex flex-col justify-between hover:-translate-y-1.5 transition-transform duration-300 shadow-md shadow-black/20 group"
+              >
+                <div>
+                  <div
+                    class="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-on-primary transition-colors"
+                  >
+                    <span class="material-symbols-outlined">diversity_3</span>
+                  </div>
+                  <span
+                    class="font-label-caps text-label-caps text-on-surface-variant tracking-wider uppercase block mb-1"
+                    >Integratsiya</span
+                  >
+                  <h4
+                    class="font-headline-sm text-headline-sm text-on-surface mb-3"
+                  >
+                    O'zaro Ishonch Muhiti
+                  </h4>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Sinf sardorlari o'rtasida sog'lom ko'prik va o'zaro tajriba
+                    almashish tizimi yo'lga qo'yilib, birdamlik maydoni
+                    yaratildi.
+                  </p>
+                </div>
+                <div
+                  class="mt-8 pt-4 bg-surface-container-high/40 rounded-lg p-3"
+                >
+                  <span
+                    class="font-label-caps text-label-caps text-primary block"
+                    >Hamjihatlik Darajasi</span
+                  >
+                  <span
+                    class="font-headline-md text-headline-md text-on-surface font-bold"
+                    >100%</span
+                  >
+                  <span
+                    class="font-body-sm text-body-sm text-on-surface-variant block"
+                    >Jamoaviy qamrovga erishildi</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- BIZ QILGAN ISHLAR (GALEREYA) -->
+            <div class="mt-20">
+              <div
+                class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4"
+              >
+                <div>
+                  <span
+                    class="font-label-caps text-label-caps text-tertiary tracking-widest uppercase block mb-2"
+                    >Galereya • Amaliy Ishlar</span
+                  >
+                  <h3
+                    class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface"
+                  >
+                    Biz Qilgan
+                    <span class="italic font-normal text-primary">Ishlar</span>
+                  </h3>
+                </div>
+                <p
+                  class="font-body-md text-body-md text-on-surface-variant max-w-md"
+                >
+                  348-maktabda o'tkazilgan darslar, debatlar va yangi usuldagi
+                  mashg'ulotlardan namunalar.
+                </p>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div
+                  class="rounded-xl bg-surface-container/70 backdrop-blur-xl overflow-hidden shadow-xl group hover:-translate-y-1.5 transition-transform duration-300"
+                >
+                  <div
+                    class="h-64 w-full overflow-hidden bg-surface-container-high"
+                  >
+                    <img
+                      src="./photo_2026-10-21_10-37-53.jpg"
+                      alt="Interaktiv dars va debatlar"
+                      loading="lazy"
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div class="p-6">
+                    <span
+                      class="font-label-caps text-label-caps text-primary uppercase block mb-1"
+                      >Ish 01</span
+                    >
+                    <h4
+                      class="font-headline-sm text-headline-sm text-on-surface mb-2"
+                    >
+                      Interaktiv Dars &amp; Debatlar
+                    </h4>
+                    <p
+                      class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                    >
+                      O'quvchilar faol qatnashgan, texnologiyalar bilan
+                      boyitilgan zamonaviy dars.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="rounded-xl bg-surface-container/70 backdrop-blur-xl overflow-hidden shadow-xl group hover:-translate-y-1.5 transition-transform duration-300"
+                >
+                  <div
+                    class="h-64 w-full overflow-hidden bg-surface-container-high"
+                  >
+                    <img
+                      src="./photo_2026-10-21_10-38-23.jpg"
+                      alt="Qulay o'quv muhiti"
+                      loading="lazy"
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div class="p-6">
+                    <span
+                      class="font-label-caps text-label-caps text-tertiary uppercase block mb-1"
+                      >Ish 02</span
+                    >
+                    <h4
+                      class="font-headline-sm text-headline-sm text-on-surface mb-2"
+                    >
+                      Qulay O'quv Muhiti
+                    </h4>
+                    <p
+                      class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                    >
+                      Yorqin, qulay va o'quvchilar uchun ilhomlantiruvchi sinf
+                      xonasi muhiti.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="rounded-xl bg-surface-container/70 backdrop-blur-xl overflow-hidden shadow-xl group hover:-translate-y-1.5 transition-transform duration-300"
+                >
+                  <div
+                    class="h-64 w-full overflow-hidden bg-surface-container-high"
+                  >
+                    <img
+                      src="./photo_2026-10-21_10-38-56.jpg"
+                      alt="Innovatsion taqdimot darsi"
+                      loading="lazy"
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div class="p-6">
+                    <span
+                      class="font-label-caps text-label-caps text-secondary uppercase block mb-1"
+                      >Ish 03</span
+                    >
+                    <h4
+                      class="font-headline-sm text-headline-sm text-on-surface mb-2"
+                    >
+                      Innovatsion Taqdimotlar
+                    </h4>
+                    <p
+                      class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                    >
+                      Vizual materiallar va amaliy mashqlar orqali o'tkazilgan
+                      jonli mashg'ulot.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 3 -->
+        <section
+          class="relative px-margin-mobile md:px-margin py-space-2xl"
+          id="sec-3"
+        >
+          <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+              <span
+                class="font-label-caps text-label-caps text-tertiary tracking-widest uppercase block mb-2"
+                >03-Qism • Strategik Transformatsiya</span
+              >
+              <h2
+                class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4"
+              >
+                Agar Men Bektemir Tumani Sardori Bo'lsam...
+              </h2>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Eski byurokratik maktab idorasidan zamonaviy sinergik ta'lim
+                ekotizimiga qat'iy o'tish rejasi.
+              </p>
+            </div>
+            <div
+              class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch relative"
+            >
+              <div
+                class="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 w-14 h-14 rounded-full bg-primary text-on-primary items-center justify-center shadow-2xl"
+              >
+                <span class="material-symbols-outlined text-[28px]"
+                  >trending_flat</span
+                >
+              </div>
+              <div
+                class="rounded-xl bg-surface-container-low/80 backdrop-blur-xl p-8 flex flex-col justify-between shadow-lg"
+              >
+                <div>
+                  <div class="flex items-center justify-between mb-6">
+                    <span
+                      class="px-3 py-1 rounded-full bg-error-container text-error font-label-caps text-label-caps uppercase"
+                      >Eski Holat</span
+                    >
+                    <span class="material-symbols-outlined text-outline"
+                      >do_not_disturb_on</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm text-on-surface mb-6"
+                  >
+                    Yakkalangan Maktablar va Formalizm
+                  </h3>
+                  <ul class="space-y-4">
+                    <li class="flex items-start gap-3">
+                      <span
+                        class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5"
+                        >close</span
+                      ><span
+                        class="font-body-md text-body-md text-on-surface-variant"
+                        >Maktablar o'z qobig'iga o'ralib qolgan, o'quvchilar
+                        bir-biriga raqibdek qarashadi.</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span
+                        class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5"
+                        >close</span
+                      ><span
+                        class="font-body-md text-body-md text-on-surface-variant"
+                        >Tadbirlar faqat yuqoriga rasmiy hisobot topshirish va
+                        qog'oz to'ldirish uchun o'tkaziladi.</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span
+                        class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5"
+                        >close</span
+                      ><span
+                        class="font-body-md text-body-md text-on-surface-variant"
+                        >Faqat 4-5 nafar doimiy faol o'quvchi sahnaga chiqadi,
+                        qolgan yoshlar chetda qoladi.</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span
+                        class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5"
+                        >close</span
+                      ><span
+                        class="font-body-md text-body-md text-on-surface-variant"
+                        >Texnologiyalar va sun'iy intellekt taqiqlanadigan yoki
+                        qo'rqiladigan narsa sifatida ko'riladi.</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="mt-8 pt-4 bg-surface-container-highest/20 rounded-lg p-3"
+                >
+                  <span
+                    class="font-label-caps text-label-caps text-outline block"
+                    >Oqibat</span
+                  >
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    O'quvchilarda motivatsiya so'nishi va yoshlar salohiyatining
+                    ochilmay qolishi.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="rounded-xl bg-surface-container/90 backdrop-blur-xl p-8 flex flex-col justify-between shadow-2xl relative overflow-hidden"
+              >
+                <div
+                  class="absolute -top-12 -right-12 w-48 h-48 bg-primary/20 rounded-full blur-2xl pointer-events-none"
+                ></div>
+                <div>
+                  <div class="flex items-center justify-between mb-6">
+                    <span
+                      class="px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-caps text-label-caps uppercase font-semibold"
+                      >Bizning Transformatsiya</span
+                    >
+                    <span class="material-symbols-outlined text-primary"
+                      >auto_awesome</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm text-on-surface mb-6"
+                  >
+                    Bektemir Ta'lim Klasteri &amp; Sinergiya
+                  </h3>
+                  <ul class="space-y-4">
+                    <li class="flex items-start gap-3">
+                      <span
+                        class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5"
+                        >check_circle</span
+                      ><span class="font-body-md text-body-md text-on-surface"
+                        ><strong>Maktablar Klasteri:</strong> Tuman maktablari
+                        birlashadi, boy laboratoriya va resurslar o'zaro
+                        almashiladi.</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span
+                        class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5"
+                        >check_circle</span
+                      ><span class="font-body-md text-body-md text-on-surface"
+                        ><strong>Jonli Natijalar:</strong> Qog'oz hisobotlar
+                        o'rniga yoshlarning amaliy loyihalari va startaplari
+                        qo'llab-quvvatlanadi.</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span
+                        class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5"
+                        >check_circle</span
+                      ><span class="font-body-md text-body-md text-on-surface"
+                        ><strong>Ommaviy Qamrov:</strong> Har bir o'quvchining
+                        ichidagi yashirin qobiliyat aniqlanib, mos yo'nalishga
+                        yo'naltiriladi.</span
+                      >
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span
+                        class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5"
+                        >check_circle</span
+                      ><span class="font-body-md text-body-md text-on-surface"
+                        ><strong>Kelajak Ko'nikmalari:</strong> AI, raqamli
+                        media va shaxsiy brend vositalari yoshlar xizmatiga
+                        qo'yiladi.</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="mt-8 pt-4 bg-primary/10 rounded-lg p-3">
+                  <span
+                    class="font-label-caps text-label-caps text-primary block"
+                    >Kutilayotgan Sinergiya</span
+                  >
+                  <p class="font-body-sm text-body-sm text-on-surface">
+                    Bektemir yoshlari Toshkent miqyosida eng ilg'or, innovatsion
+                    va do'stona jamoaga aylanadi.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 4 -->
+        <section
+          class="relative px-margin-mobile md:px-margin py-space-2xl bg-surface-container-lowest/30"
+          id="sec-4"
+        >
+          <div class="max-w-6xl mx-auto">
+            <div class="max-w-3xl mb-14">
+              <span
+                class="font-label-caps text-label-caps text-secondary tracking-widest uppercase block mb-2"
+                >04-Qism • Qizlar Akademiyasi</span
+              >
+              <h2
+                class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4"
+              >
+                Creative Essence:
+                <span class="italic font-normal text-secondary"
+                  >San'at, Mahorat va Biznes</span
+                >
+              </h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant">
+                Qizlarning sevimli mashg'ulotlarini kamsitmagan holda, ularni
+                zamonaviy monetizatsiya, shaxsiy brend va xalqaro estetik
+                darajaga olib chiqish.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div
+                class="rounded-xl bg-surface-container/70 backdrop-blur-xl p-8 flex flex-col justify-between hover:scale-[1.02] transition-all duration-300 shadow-xl group"
+              >
+                <div>
+                  <div
+                    class="h-44 w-full rounded-lg mb-6 overflow-hidden relative bg-surface-container-high"
+                  >
+                    <img
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      alt="MasterChef Bektemir"
+                      data-alt="Uzbek high school girls participating in an elegant culinary workshop, decorating modern French-style pastries with edible flowers, warm soft daylight studio setting, luxury pastel tones"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTsHMu5XEk4uCrWjdjlgXi97jDDmxQ4HV29Tc-gPhillgWcSahKtQD1xsqAhAV0QPFVavuaJ4TH4PLN8dsyByJK6ySZODyTgeLjkk4L-z-Boq_nobj19f06r_EVD4DgbLKwL1YYYtDP7o0A_eHfBky1nQaTj-qVhw2vRJtOiNyglpO6B5Ae3Foyuq-xhs2tvI-3cotyht1YQ95l0UjaxtU2s_4pL040TNRfLoCU2fcuOx_Q7aqV6VT8g"
+                    />
+                    <span
+                      class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-surface-container-lowest/80 text-secondary font-label-caps text-label-caps backdrop-blur-md"
+                      >Gastro-San'at</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm text-on-surface mb-2"
+                  >
+                    MasterChef Bektemir
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4"
+                  >
+                    Qandolatchilik, pazandachilik va estetik dasturxon san'ati
+                    bo'yicha maktablararo do'stona bellashuvlar. Sog'lom
+                    ovqatlanish madaniyati va gigiyena qoidalari.
+                  </p>
+                </div>
+                <div class="pt-4 bg-surface-container-high/40 rounded-lg p-3">
+                  <span
+                    class="font-label-caps text-label-caps text-secondary uppercase block mb-1"
+                    >Amaliy Natija</span
+                  >
+                  <span class="font-body-sm text-body-sm text-on-surface"
+                    >Mini-brendlar yaratish &amp; shaxsiy buyurtmalar olish
+                    ko'nikmasi</span
+                  >
+                </div>
+              </div>
+              <div
+                class="rounded-xl bg-surface-container/70 backdrop-blur-xl p-8 flex flex-col justify-between hover:scale-[1.02] transition-all duration-300 shadow-xl group"
+              >
+                <div>
+                  <div
+                    class="h-44 w-full rounded-lg mb-6 overflow-hidden relative bg-surface-container-high"
+                  >
+                    <img
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      alt="Eco-Art &amp; Upcycling"
+                      data-alt="Artistic upcycling workshop with teenage girls crafting modern fashion accessories and eco canvas bags using traditional Uzbek Ikat patterns and recycled fabrics, editorial aesthetic, soft rim lighting"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkMR6bDeUdCYZwr9dW-QqCEx51j-ULjtAXVCCwDKDrHmX-kT_bp_ipnzV-8uH7rnpNdDQ5Cb-cW685vSI714JF8G2cOChV7Aj0ji39YWhqkDRIoDee47a9T5d88-4ECo6EQcIi_K8bEzEHN3hpKyzgIBi8jk_Gjw2RP2GqpRMoY1reVk5PJOsqL_FA8OI6x8VLUv2rMrUjErF9PTmMCxuj4V4wsHcrpkXINZAfgLnhpRmLEw90LYiG0w"
+                    />
+                    <span
+                      class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-surface-container-lowest/80 text-secondary font-label-caps text-label-caps backdrop-blur-md"
+                      >Eko-Dizayn</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm text-on-surface mb-2"
+                  >
+                    Eco-Art &amp; Upcycling
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4"
+                  >
+                    Qayta ishlangan matolar va materiallardan milliy tusdagi
+                    eko-shoperlar, aksessuarlar va kiyimlar yaratish. Tabiatni
+                    asrash va zamonaviy uslub uyg'unligi.
+                  </p>
+                </div>
+                <div class="pt-4 bg-surface-container-high/40 rounded-lg p-3">
+                  <span
+                    class="font-label-caps text-label-caps text-secondary uppercase block mb-1"
+                    >Amaliy Natija</span
+                  >
+                  <span class="font-body-sm text-body-sm text-on-surface"
+                    >Ekologik mas'uliyat va hunarmandchilik startaplari</span
+                  >
+                </div>
+              </div>
+              <div
+                class="rounded-xl bg-surface-container/70 backdrop-blur-xl p-8 flex flex-col justify-between hover:scale-[1.02] transition-all duration-300 shadow-xl group"
+              >
+                <div>
+                  <div
+                    class="h-44 w-full rounded-lg mb-6 overflow-hidden relative bg-surface-container-high"
+                  >
+                    <img
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      alt="Shaxsiy Brend va Notiqlik"
+                      data-alt="Confident young Uzbek girl giving an inspiring TED-style speech in a futuristic minimalist auditorium with soft mint and warm gold lighting, polished public speaking presentation"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxj4AyRbbsjC7qpcHo8hZKgKIXlOYK7LWZOvimxqvbUd36N60s5PzVxjx4iLXOnw5cFYCmMQtZvB5G4_p1DV2UugKAe00tJdTaECYba536fXi3Q0x19MNw3-iNQQmOrz94kTj8pFL1jNMOVLWrf5ec4Oelf_44oYdCiUR7LV0bHUMD8aPgLjDgS-6kWR0tZef4H3zAJakaLFCee-051vM1jzn_8FtayFlhLN2mG6MSbzbEyIArI3YATQ"
+                    />
+                    <span
+                      class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-surface-container-lowest/80 text-secondary font-label-caps text-label-caps backdrop-blur-md"
+                      >Liderlik</span
+                    >
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm text-on-surface mb-2"
+                  >
+                    Shaxsiy Brend va Notiqlik
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4"
+                  >
+                    Qizlarning o'z ijod mahsulotlarini internetda namoyish
+                    etishi uchun vizual storytelling, mobilografiya, kamera
+                    qarshisida dadil gapirish darslari.
+                  </p>
+                </div>
+                <div class="pt-4 bg-surface-container-high/40 rounded-lg p-3">
+                  <span
+                    class="font-label-caps text-label-caps text-secondary uppercase block mb-1"
+                    >Amaliy Natija</span
+                  >
+                  <span class="font-body-sm text-body-sm text-on-surface"
+                    >O'ziga bo'lgan yuksak ishonch &amp; professional
+                    portfoliolar</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 5 -->
+        <section
+          class="relative px-margin-mobile md:px-margin py-space-2xl"
+          id="sec-5"
+        >
+          <div class="max-w-6xl mx-auto">
+            <div
+              class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4"
+            >
+              <div>
+                <span
+                  class="font-label-caps text-label-caps text-primary tracking-widest uppercase block mb-2"
+                  >05-Qism • Texnologiya &amp; Kiberintellekt</span
+                >
+                <h2
+                  class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface"
+                >
+                  Gamerlikdan —
+                  <span class="italic font-normal text-primary"
+                    >Yaratuvchilikka</span
+                  >
+                </h2>
+              </div>
+              <p
+                class="font-body-md text-body-md text-on-surface-variant max-w-md"
+              >
+                O'yinlarga bo'lgan kuchli ishtiyoqni bekorga sarflamasdan, uni
+                tuman miqyosidagi IT va muhandislik salohiyatiga yo'naltirish.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div
+                class="rounded-xl bg-surface-container/70 backdrop-blur-xl p-8 flex flex-col justify-between hover:-translate-y-1 transition-all duration-300 shadow-xl group"
+              >
+                <div>
+                  <div
+                    class="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+                  >
+                    <span class="material-symbols-outlined text-[26px]"
+                      >code</span
+                    >
+                  </div>
+                  <span
+                    class="font-label-caps text-label-caps text-primary uppercase block mb-2"
+                    >Dasturlash Harakati</span
+                  >
+                  <h3
+                    class="font-headline-sm text-headline-sm text-on-surface mb-3"
+                  >
+                    GameDev &amp; Hackathon
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-6"
+                  >
+                    CS yoki PUBG da shunchaki vaqt o'tkazish emas! Roblox
+                    Studio, Scratch va Python orqali o'z o'yin loyihalarini
+                    yaratish hakatonlari. O'yinchi emas — dasturchi bo'l!
+                  </p>
+                </div>
+                <div
+                  class="p-4 rounded-lg bg-surface-container-high/60 flex items-center justify-between"
+                >
+                  <span
+                    class="font-label-caps text-label-caps text-on-surface-variant"
+                    >Qamrov:</span
+                  >
+                  <span
+                    class="font-body-sm text-body-sm text-primary font-semibold"
+                    >Tuman bo'ylab 100+ kod yaratuvchilari</span
+                  >
+                </div>
+              </div>
+              <div
+                class="rounded-xl bg-surface-container/70 backdrop-blur-xl p-8 flex flex-col justify-between hover:-translate-y-1 transition-all duration-300 shadow-xl group"
+              >
+                <div>
+                  <div
+                    class="w-12 h-12 rounded-lg bg-tertiary/10 text-tertiary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+                  >
+                    <span class="material-symbols-outlined text-[26px]"
+                      >smart_toy</span
+                    >
+                  </div>
+                  <span
+                    class="font-label-caps text-label-caps text-tertiary uppercase block mb-2"
+                    >Muhandislik Laboratoriyasi</span
+                  >
+                  <h3
+                    class="font-headline-sm text-headline-sm text-on-surface mb-3"
+                  >
+                    Robo-Jang &amp; Apparatlar
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-6"
+                  >
+                    Maktablararo avtomatlashtirilgan robotlar ligasi. Arduino
+                    mikrokontrollerlari, datchiklar va elektron sxemalar bilan
+                    ishlash bo'yicha ochiq amaliy ustaxonalar.
+                  </p>
+                </div>
+                <div
+                  class="p-4 rounded-lg bg-surface-container-high/60 flex items-center justify-between"
+                >
+                  <span
+                    class="font-label-caps text-label-caps text-on-surface-variant"
+                    >Yo'nalish:</span
+                  >
+                  <span
+                    class="font-body-sm text-body-sm text-tertiary font-semibold"
+                    >Amaliy STEM &amp; Robototexnika</span
+                  >
+                </div>
+              </div>
+              <div
+                class="rounded-xl bg-surface-container/70 backdrop-blur-xl p-8 flex flex-col justify-between hover:-translate-y-1 transition-all duration-300 shadow-xl group"
+              >
+                <div>
+                  <div
+                    class="w-12 h-12 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"
+                  >
+                    <span class="material-symbols-outlined text-[26px]"
+                      >sports_esports</span
+                    >
+                  </div>
+                  <span
+                    class="font-label-caps text-label-caps text-secondary uppercase block mb-2"
+                    >Intellektual Strategiya</span
+                  >
+                  <h3
+                    class="font-headline-sm text-headline-sm text-on-surface mb-3"
+                  >
+                    Cyber-Strategiya &amp; Taktika
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-6"
+                  >
+                    Kiber-musobaqalarni shunchaki o'yin emas, balki qat'iy
+                    rejalashtirish, jamoaviy kommunikatsiya, tezkor tahlil va
+                    mantiqiy fikrlash platformasiga aylantirish.
+                  </p>
+                </div>
+                <div
+                  class="p-4 rounded-lg bg-surface-container-high/60 flex items-center justify-between"
+                >
+                  <span
+                    class="font-label-caps text-label-caps text-on-surface-variant"
+                    >Ko'nikma:</span
+                  >
+                  <span
+                    class="font-body-sm text-body-sm text-secondary font-semibold"
+                    >Tezkor qaror qabul qilish</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 6 -->
+        <section
+          class="relative px-margin-mobile md:px-margin py-space-2xl bg-surface-container-lowest/50"
+          id="sec-6"
+        >
+          <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+              <span
+                class="font-label-caps text-label-caps text-primary tracking-widest uppercase block mb-2"
+                >06-Qism • Maktablararo Do'stlik</span
+              >
+              <h2
+                class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4"
+              >
+                Bektemir Maktablari —
+                <span class="italic font-normal text-tertiary"
+                  >Yagona Jamoa</span
+                >
+              </h2>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Maktablarni bir-biri bilan urushtiradigan soxta reytinglar
+                o'rniga, sinergik 3-bosqichli do'stlik ko'prigi.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+              <div
+                class="rounded-xl bg-surface-container/70 backdrop-blur-xl p-8 flex flex-col justify-between shadow-xl relative overflow-hidden group"
+              >
+                <div
+                  class="absolute top-4 right-4 text-outline-variant/30 font-headline-lg font-bold"
+                >
+                  01
+                </div>
+                <div>
+                  <div
+                    class="w-10 h-10 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold mb-6"
+                  >
+                    1
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm text-on-surface mb-3"
+                  >
+                    Mini-Taqdimotlar Haftaligi
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Har haftada bitta maktab vakillari ikkinchi maktabga
+                    do'stona mehmonga boradi. O'zining eng muvaffaqiyatli darsi,
+                    startapi yoki sevimli loyihasini tengdoshlariga taqdim
+                    etadi.
+                  </p>
+                </div>
+                <div
+                  class="mt-8 pt-4 bg-surface-container-high/40 rounded-lg p-3 flex items-center gap-2"
+                >
+                  <span
+                    class="material-symbols-outlined text-primary text-[18px]"
+                    >handshake</span
+                  ><span class="font-body-sm text-body-sm text-on-surface"
+                    >Samimiy mehmondo'stlik</span
+                  >
+                </div>
+              </div>
+              <div
+                class="rounded-xl bg-surface-container/70 backdrop-blur-xl p-8 flex flex-col justify-between shadow-xl relative overflow-hidden group"
+              >
+                <div
+                  class="absolute top-4 right-4 text-outline-variant/30 font-headline-lg font-bold"
+                >
+                  02
+                </div>
+                <div>
+                  <div
+                    class="w-10 h-10 rounded-full bg-tertiary/20 text-tertiary flex items-center justify-center font-bold mb-6"
+                  >
+                    2
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm text-on-surface mb-3"
+                  >
+                    Aralash Jamoalar Bellashuvi
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Tanlovlarda maktablar bir-biriga raqib qilib qo'yilmaydi!
+                    Turli maktablarning o'quvchilaridan tuzilgan yangi sinergik
+                    aralash jamoalar umumiy muammolarga birgalikda yechim
+                    izlaydi.
+                  </p>
+                </div>
+                <div
+                  class="mt-8 pt-4 bg-surface-container-high/40 rounded-lg p-3 flex items-center gap-2"
+                >
+                  <span
+                    class="material-symbols-outlined text-tertiary text-[18px]"
+                    >group_work</span
+                  ><span class="font-body-sm text-body-sm text-on-surface"
+                    >Yangi do'stliklar poydevori</span
+                  >
+                </div>
+              </div>
+              <div
+                class="rounded-xl bg-surface-container/70 backdrop-blur-xl p-8 flex flex-col justify-between shadow-xl relative overflow-hidden group"
+              >
+                <div
+                  class="absolute top-4 right-4 text-outline-variant/30 font-headline-lg font-bold"
+                >
+                  03
+                </div>
+                <div>
+                  <div
+                    class="w-10 h-10 rounded-full bg-secondary/20 text-secondary flex items-center justify-center font-bold mb-6"
+                  >
+                    3
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm text-on-surface mb-3"
+                  >
+                    Yangi G'oyalar Festivali
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Tuman hokimligi va tadbirkorlar ishtirokida yil yakunida
+                    katta innovatsion forum o'tkaziladi. Yoshlarning amaliy
+                    g'oyalariga haqiqiy homiylar va investitsiyalar jalb
+                    qilinadi.
+                  </p>
+                </div>
+                <div
+                  class="mt-8 pt-4 bg-surface-container-high/40 rounded-lg p-3 flex items-center gap-2"
+                >
+                  <span
+                    class="material-symbols-outlined text-secondary text-[18px]"
+                    >celebration</span
+                  ><span class="font-body-sm text-body-sm text-on-surface"
+                    >Tuman miqyosidagi e'tirof</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 7 -->
+        <section
+          class="relative px-margin-mobile md:px-margin py-space-2xl"
+          id="sec-7"
+        >
+          <div class="max-w-6xl mx-auto">
+            <div class="max-w-3xl mb-14">
+              <span
+                class="font-label-caps text-label-caps text-tertiary tracking-widest uppercase block mb-2"
+                >07-Qism • Imkoniyat Maydoni</span
+              >
+              <h2
+                class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4"
+              >
+                4 Yangi Tuman Dasturi
+              </h2>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Ta'lim faqat darslik bilan cheklanmaydi — har bir qiziqish uchun
+                maxsus amaliy platforma.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div
+                class="rounded-xl bg-surface-container/70 backdrop-blur-xl p-8 flex gap-6 hover:bg-surface-container-high/70 transition-all shadow-md group"
+              >
+                <div
+                  class="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"
+                >
+                  <span class="material-symbols-outlined text-[32px]"
+                    >school</span
+                  >
+                </div>
+                <div>
+                  <span
+                    class="font-label-caps text-label-caps text-primary uppercase block mb-1"
+                    >Mentorlik</span
+                  >
+                  <h3
+                    class="font-headline-sm text-headline-sm text-on-surface mb-2"
+                  >
+                    Peer-to-Peer Mentorlik
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Katta sinfdagi bilimdon o'quvchilar kichik sinflarga xorijiy
+                    tillar, aniq fanlar va IT bo'yicha norasmiy, erkin va
+                    do'stona muhitda murabbiylik qiladi.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="rounded-xl bg-surface-container/70 backdrop-blur-xl p-8 flex gap-6 hover:bg-surface-container-high/70 transition-all shadow-md group"
+              >
+                <div
+                  class="w-14 h-14 rounded-xl bg-tertiary/10 text-tertiary flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"
+                >
+                  <span class="material-symbols-outlined text-[32px]"
+                    >lightbulb</span
+                  >
+                </div>
+                <div>
+                  <span
+                    class="font-label-caps text-label-caps text-tertiary uppercase block mb-1"
+                    >Ochiq Muloqot</span
+                  >
+                  <h3
+                    class="font-headline-sm text-headline-sm text-on-surface mb-2"
+                  >
+                    Bektemir Idea-Bank
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Har bir o'quvchi o'z maktabi va tumani rivoji uchun yangi
+                    taklif va g'oyalarini yuborishi mumkin bo'lgan ochiq onlayn
+                    telegram-bot va ovoz berish portali.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="rounded-xl bg-surface-container/70 backdrop-blur-xl p-8 flex gap-6 hover:bg-surface-container-high/70 transition-all shadow-md group"
+              >
+                <div
+                  class="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"
+                >
+                  <span class="material-symbols-outlined text-[32px]">eco</span>
+                </div>
+                <div>
+                  <span
+                    class="font-label-caps text-label-caps text-primary uppercase block mb-1"
+                    >Ekologiya</span
+                  >
+                  <h3
+                    class="font-headline-sm text-headline-sm text-on-surface mb-2"
+                  >
+                    Yashil Innovatsiya
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Maktab hovlilarida tomchilatib sug'oriladigan aqlli botanika
+                    maydonchalari va yoshlar tomonidan parvarishlanadigan
+                    zamonaviy yashil oazislar barpo etish.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="rounded-xl bg-surface-container/70 backdrop-blur-xl p-8 flex gap-6 hover:bg-surface-container-high/70 transition-all shadow-md group"
+              >
+                <div
+                  class="w-14 h-14 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"
+                >
+                  <span class="material-symbols-outlined text-[32px]"
+                    >podium</span
+                  >
+                </div>
+                <div>
+                  <span
+                    class="font-label-caps text-label-caps text-secondary uppercase block mb-1"
+                    >Erkin Minbar</span
+                  >
+                  <h3
+                    class="font-headline-sm text-headline-sm text-on-surface mb-2"
+                  >
+                    Spikerlar Klubi (Bektemir Talks)
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    TEDx formatidagi tuman o'quvchilari minbari: yoshlarning
+                    jasur g'oyalari, muvaffaqiyatsizliklardan olingan saboqlar
+                    va jamiyatga foydali fikrlar maydoni.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 8 -->
+        <section
+          class="relative px-margin-mobile md:px-margin py-space-2xl bg-surface-container-low/60"
+          id="sec-8"
+        >
+          <div class="max-w-6xl mx-auto">
+            <div
+              class="rounded-xl bg-surface-container/90 backdrop-blur-2xl p-8 md:p-14 text-center mb-12 shadow-2xl relative overflow-hidden"
+            >
+              <div
+                class="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary/15 rounded-full blur-[90px] pointer-events-none"
+              ></div>
+              <span
+                class="font-label-caps text-label-caps text-primary tracking-widest uppercase block mb-4"
+                >08-Qism • Bosh Falsafa &amp; Manifest</span
+              >
+              <h2
+                class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface max-w-4xl mx-auto leading-tight mb-6"
+              >
+                «Biz sun'iy intellektni boshqaramiz,
+                <span class="italic font-normal text-tertiary"
+                  >u bizni emas!»</span
+                >
+              </h2>
+              <p
+                class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto"
+              >
+                Sun'iy intellekt inson aqlini cheklamasligi, aksincha uning
+                yaratuvchanligini o'n barobarga oshirishi zarur.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div
+                class="rounded-xl bg-surface-container/70 backdrop-blur-xl p-8 shadow-xl"
+              >
+                <div class="flex items-center gap-3 mb-6">
+                  <span
+                    class="w-10 h-10 rounded-full bg-primary/20 text-primary flex items-center justify-center"
+                    ><span class="material-symbols-outlined text-[20px]"
+                      >terminal</span
+                    ></span
+                  >
+                  <h3
+                    class="font-headline-sm text-headline-sm text-on-surface font-semibold"
+                  >
+                    Algoritmlarni Bo'ysundirish
+                  </h3>
+                </div>
+                <p
+                  class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6"
+                >
+                  ChatGPT, Claude, Midjourney kabi vositalardan vazifalarni
+                  ko'r-ko'rona ko'chirish yoki dangasalik uchun emas, balki
+                  murakkab ilmiy maqolalarni daqiqalar ichida tahlil qilish,
+                  yangi g'oyalarni generatsiya qilish va dasturlashni tez
+                  o'rganish uchun samarali qurol sifatida foydalanish.
+                </p>
+                <div class="p-4 rounded-lg bg-surface-container-high/60">
+                  <span
+                    class="font-label-caps text-label-caps text-primary uppercase block mb-1"
+                    >Amaliyotda</span
+                  >
+                  <span class="font-body-sm text-body-sm text-on-surface"
+                    >"AI Savodxonlik" bo'yicha ochiq o'quv seanslari</span
+                  >
+                </div>
+              </div>
+              <div
+                class="rounded-xl bg-surface-container/70 backdrop-blur-xl p-8 shadow-xl"
+              >
+                <div class="flex items-center gap-3 mb-6">
+                  <span
+                    class="w-10 h-10 rounded-full bg-tertiary/20 text-tertiary flex items-center justify-center"
+                    ><span class="material-symbols-outlined text-[20px]"
+                      >favorite</span
+                    ></span
+                  >
+                  <h3
+                    class="font-headline-sm text-headline-sm text-on-surface font-semibold"
+                  >
+                    Insoniy Qadriyatlar Ustuvorligi
+                  </h3>
+                </div>
+                <p
+                  class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6"
+                >
+                  Hech qanday sun'iy ong insoniy mehr, samimiylik, empatiya,
+                  axloq va jamoaviy ishonch o'rnini bosa olmaydi. Biz
+                  texnologiyani rivojlantirar ekanmiz, qalbimizdagi ma'naviyat,
+                  do'stlik va o'zaro hurmatni har doim birinchi o'ringa
+                  qo'yamiz.
+                </p>
+                <div class="p-4 rounded-lg bg-surface-container-high/60">
+                  <span
+                    class="font-label-caps text-label-caps text-tertiary uppercase block mb-1"
+                    >Amaliyotda</span
+                  >
+                  <span class="font-body-sm text-body-sm text-on-surface"
+                    >Inson kapitali va samimiy jamoaviy muhit</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 9 -->
+        <section
+          class="relative px-margin-mobile md:px-margin py-space-2xl"
+          id="sec-9"
+        >
+          <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+              <span
+                class="font-label-caps text-label-caps text-primary tracking-widest uppercase block mb-2"
+                >09-Qism • Aniq Reja</span
+              >
+              <h2
+                class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4"
+              >
+                Mening 90 Kunlik Yo'l Xaritam
+              </h2>
+              <p class="font-body-md text-body-md text-on-surface-variant">
+                Saylovdan keyingi har bir kun aniq maqsad va o'lchanadigan
+                natijalar bilan belgilangan.
+              </p>
+            </div>
+            <div class="space-y-8 relative">
+              <div
+                class="flex flex-col md:flex-row items-start gap-6 p-6 rounded-xl bg-surface-container/70 backdrop-blur-xl shadow-lg relative overflow-hidden"
+              >
+                <div
+                  class="w-12 h-12 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center shrink-0"
+                >
+                  01
+                </div>
+                <div class="flex-1">
+                  <div
+                    class="flex flex-wrap items-center justify-between gap-2 mb-2"
+                  >
+                    <h3
+                      class="font-headline-sm text-headline-sm text-on-surface font-semibold"
+                    >
+                      1 – 30 Kun: Tashkiliy Asos &amp; Birlashuv
+                    </h3>
+                    <span
+                      class="px-3 py-0.5 rounded-full bg-primary/10 text-primary font-label-caps text-label-caps"
+                      >1-OY</span
+                    >
+                  </div>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                  >
+                    Tuman maktablarining ta'lim sardorlari bilan uchrashuvlar,
+                    konsultatsiyalar va yagona "Bektemir Yoshlar Klasteri"
+                    ishchi guruhini shakllantirish. Har bir maktabdagi muammo va
+                    ehtiyojlar xaritasini to'liq shakllantirish.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex flex-col md:flex-row items-start gap-6 p-6 rounded-xl bg-surface-container/70 backdrop-blur-xl shadow-lg relative overflow-hidden"
+              >
+                <div
+                  class="w-12 h-12 rounded-full bg-tertiary/20 text-tertiary font-bold flex items-center justify-center shrink-0"
+                >
+                  02
+                </div>
+                <div class="flex-1">
+                  <div
+                    class="flex flex-wrap items-center justify-between gap-2 mb-2"
+                  >
+                    <h3
+                      class="font-headline-sm text-headline-sm text-on-surface font-semibold"
+                    >
+                      31 – 60 Kun: Amaliy Start &amp; Sinov
+                    </h3>
+                    <span
+                      class="px-3 py-0.5 rounded-full bg-tertiary/10 text-tertiary font-label-caps text-label-caps"
+                      >2-OY</span
+                    >
+                  </div>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                  >
+                    Qizlar va o'g'il bolalar uchun dastlabki tuman miqyosidagi
+                    mahorat darslari (MasterChef, GameDev, Debat klubi) va
+                    mini-musobaqalarni ishga tushirish. Spikerlar klubining ilk
+                    ochiq efirini o'tkazish.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="flex flex-col md:flex-row items-start gap-6 p-6 rounded-xl bg-surface-container/70 backdrop-blur-xl shadow-lg relative overflow-hidden"
+              >
+                <div
+                  class="w-12 h-12 rounded-full bg-secondary/20 text-secondary font-bold flex items-center justify-center shrink-0"
+                >
+                  03
+                </div>
+                <div class="flex-1">
+                  <div
+                    class="flex flex-wrap items-center justify-between gap-2 mb-2"
+                  >
+                    <h3
+                      class="font-headline-sm text-headline-sm text-on-surface font-semibold"
+                    >
+                      61 – 90 Kun: Festival &amp; Natijalar
+                    </h3>
+                    <span
+                      class="px-3 py-0.5 rounded-full bg-secondary/10 text-secondary font-label-caps text-label-caps"
+                      >3-OY</span
+                    >
+                  </div>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                  >
+                    Maktablararo yangi g'oyalar festivalini o'tkazish, eng faol
+                    va tashabbuskor o'quvchilarni tuman darajasida taqdirlash.
+                    Tuman hokimligi va jamoatchilikka amalga oshirilgan
+                    ishlarning ilk ochiq shaffof hisobotini berish.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 10 -->
+        <section
+          class="relative px-margin-mobile md:px-margin py-space-2xl bg-surface-container-lowest overflow-hidden"
+          id="sec-10"
+        >
+          <div
+            class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-primary/10 rounded-full blur-[140px] pointer-events-none"
+          ></div>
+          <div
+            class="max-w-4xl mx-auto flex flex-col items-center text-center relative z-10"
+          >
+            <div
+              class="w-28 h-28 rounded-2xl bg-surface-container-high/80 p-2 backdrop-blur-2xl shadow-2xl mb-8 flex items-center justify-center"
+            >
+              <img
+                alt="Bektemir Sardorlik Emblemasi"
+                class="w-full h-full object-cover rounded-xl shadow-md"
+                src="https://lh3.googleusercontent.com/aida/AEtjO1UArXiew5Koz9ZjdB0pQLA6Sb1OLJoux6jgbCY7y1klRWMQrnAef_PIOf8LMVqsGFgvd1j0KYbfr3P0b6sBxOaLcHVY-S8QYZ_5YTXDTVU-KIuFe0DGGXXN8GpXSJ9rJo93yYn4z6JfrejD82M9e7wLLvVTfdpbFdpnVDGTAvc1vnKZHYpIFGiB5t1dn4xSkacs78_z70zdooEGWO4LxigPQ9F-QsnzE_6u1y-_cu3DgAhuydw_Sty-UDz3"
+              />
+            </div>
+            <span
+              class="font-label-caps text-label-caps text-tertiary tracking-widest uppercase block mb-3"
+              >10-Qism • Yakuniy Chaqiriq</span
+            >
+            <h2
+              class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface leading-tight mb-6"
+            >
+              «Bektemir yoshlari nafaqat bilim oluvchilar, balki butun shahar
+              uchun namuna bo'ladigan
+              <span class="italic font-normal text-primary"
+                >yangilik yaratuvchilardir!»</span
+              >
+            </h2>
+            <p
+              class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed max-w-2xl mb-8"
+            >
+              Men, <strong>Abdukarimova Muborak</strong>, o'z tajribam,
+              kuch-g'ayratim va amaliy dasturim bilan har bir o'quvchining
+              ovozini eshitishga, uning orzularini ro'yobga chiqarishga va
+              tumanimiz ta'limini poytaxtda birinchi o'ringa olib chiqishga
+              tayyorman.
+            </p>
+            <div
+              class="flex flex-wrap items-center justify-center gap-3 mb-10 max-w-xl"
+            >
+              <span
+                class="px-4 py-2 rounded-full bg-surface-container-high text-on-surface font-label-caps text-label-caps shadow-sm"
+                >🤝 Hamkorlik</span
+              >
+              <span
+                class="px-4 py-2 rounded-full bg-surface-container-high text-on-surface font-label-caps text-label-caps shadow-sm"
+                >💡 Innovatsiya</span
+              >
+              <span
+                class="px-4 py-2 rounded-full bg-surface-container-high text-on-surface font-label-caps text-label-caps shadow-sm"
+                >🤖 Sun'iy Intellekt</span
+              >
+              <span
+                class="px-4 py-2 rounded-full bg-surface-container-high text-on-surface font-label-caps text-label-caps shadow-sm"
+                >🎯 Yuksak Natija</span
+              >
+              <span
+                class="px-4 py-2 rounded-full bg-surface-container-high text-on-surface font-label-caps text-label-caps shadow-sm"
+                >🌿 Barqaror Kelajak</span
+              >
+            </div>
+            <div
+              class="w-full max-w-md p-6 rounded-xl bg-surface-container/90 backdrop-blur-xl shadow-2xl text-center mb-8"
+            >
+              <span
+                class="font-label-caps text-label-caps text-outline block mb-2"
+                >Jamoaga Qo'shiling</span
+              >
+              <div class="flex items-center justify-center gap-2 mb-4">
+                <span
+                  class="font-headline-lg text-headline-lg text-primary font-bold"
+                  id="support-count"
+                  >1,482</span
+                >
+                <span class="font-body-sm text-body-sm text-on-surface-variant"
+                  >tashabbuskor ovoz</span
+                >
+              </div>
+              <button
+                class="w-full py-4 rounded-full bg-primary text-on-primary font-label-ui text-label-ui font-semibold shadow-lg shadow-primary/25 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2"
+                id="vote-btn"
+              >
+                <span class="material-symbols-outlined text-[20px]"
+                  >how_to_vote</span
+                >
+                <span id="vote-btn-text">Dasturni Qo'llab-quvvatlayman</span>
+              </button>
+            </div>
+            <div
+              class="flex flex-col sm:flex-row items-center gap-4 text-on-surface-variant font-body-sm text-body-sm pt-8"
+            >
+              <span>© 2025 Abdukarimova Muborak</span>
+              <span class="hidden sm:inline">•</span>
+              <span>Bektemir Tumani 348-Maktab</span>
+              <span class="hidden sm:inline">•</span>
+              <span class="text-primary font-medium"
+                >Birlashamiz va Yutamiz!</span
+              >
+            </div>
+          </div>
+        </section>
+
+        <script>
+          // ================== DARK / LIGHT REJIM ==================
+          (function () {
+            var root = document.documentElement;
+            var btn = document.getElementById("theme-toggle");
+            var icon = document.getElementById("theme-icon");
+
+            function applyTheme(theme) {
+              if (theme === "light") {
+                root.classList.remove("dark");
+                icon.textContent = "dark_mode"; // light rejimda "tungi rejim"ga o'tish belgisi
+                btn.title = "Tungi rejimga o'tish";
+              } else {
+                root.classList.add("dark");
+                icon.textContent = "light_mode"; // dark rejimda "kunduzgi rejim"ga o'tish belgisi
+                btn.title = "Kunduzgi rejimga o'tish";
+              }
+              try {
+                localStorage.setItem("theme", theme);
+              } catch (e) {}
+            }
+
+            applyTheme(root.classList.contains("dark") ? "dark" : "light");
+
+            btn.addEventListener("click", function () {
+              applyTheme(root.classList.contains("dark") ? "light" : "dark");
+            });
+          })();
+
+          // ================== SILLIQ SKROLL ==================
+          document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+            anchor.addEventListener("click", function (e) {
+              var targetId = this.getAttribute("href");
+              if (targetId && targetId !== "#") {
+                var target = document.querySelector(targetId);
+                if (target) {
+                  e.preventDefault();
+                  target.scrollIntoView({ behavior: "smooth" });
+                }
+              }
+            });
+          });
+
+          // ================== YON NAVIGATSIYA (aktiv nuqta) ==================
+          (function () {
+            var dots = document.querySelectorAll(".side-dot");
+            var sections = Array.prototype.map.call(dots, function (d) {
+              return document.querySelector(d.getAttribute("href"));
+            });
+            var activeCls = [
+              "bg-primary",
+              "shadow-[0_0_16px_rgb(var(--glow)/0.5)]",
+            ];
+            function setActive(i) {
+              dots.forEach(function (d, idx) {
+                if (idx === i) {
+                  d.classList.remove("bg-surface-container-highest");
+                  activeCls.forEach(function (c) {
+                    d.classList.add(c);
+                  });
+                  d.setAttribute("aria-current", "page");
+                } else {
+                  activeCls.forEach(function (c) {
+                    d.classList.remove(c);
+                  });
+                  d.classList.add("bg-surface-container-highest");
+                  d.removeAttribute("aria-current");
+                }
+              });
+            }
+            var io = new IntersectionObserver(
+              function (entries) {
+                entries.forEach(function (en) {
+                  if (en.isIntersecting) setActive(sections.indexOf(en.target));
+                });
+              },
+              { rootMargin: "-45% 0px -50% 0px" },
+            );
+            sections.forEach(function (s) {
+              if (s) io.observe(s);
+            });
+            setActive(0);
+          })();
+
+          // ================== QO'LLAB-QUVVATLASH HISOBLAGICHI ==================
+          var voteBtn = document.getElementById("vote-btn");
+          var voteText = document.getElementById("vote-btn-text");
+          var counterEl = document.getElementById("support-count");
+          var voted = false;
+          if (voteBtn && counterEl) {
+            voteBtn.addEventListener("click", function () {
+              if (!voted) {
+                var count = parseInt(counterEl.innerText.replace(/,/g, ""), 10);
+                count += 1;
+                counterEl.innerText = count.toLocaleString();
+                voteBtn.classList.remove("bg-primary", "text-on-primary");
+                voteBtn.classList.add(
+                  "bg-surface-container-highest",
+                  "text-primary",
+                );
+                voteText.innerText = "Qo'llab-quvvatlandi! Rahmat!";
+                voted = true;
+              }
+            });
+          }
+        </script>
+      </div>
+    </main>
+  </body>
+</html>
